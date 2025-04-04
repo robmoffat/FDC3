@@ -110,6 +110,7 @@
           "context/ref/Organization",
           "context/ref/Portfolio",
           "context/ref/Position",
+          "context/ref/cdm.PriceQuantity",
           "context/ref/Product",
           "context/ref/TimeRange",
           "context/ref/Trade",

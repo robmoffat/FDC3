@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/schemas/next/context/priceQuantity.schema.json",
+    "type": "object",
+    "title": "cdm.PriceQuantity",
+    "description": "@experimental example of bringing in the CDM PriceQuantity object into FDC3",
+    "allOf": [
+        {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "const": "cdm.observable.asset.PriceQuantity"
+                },
+                "data": {
+                    "type": "object",
+                    "$ref": "./cdm/cdm-observable-asset-PriceQuantity.schema.json"
+                }
+            },
+            "required": [
+                "type",
+                "data"
+            ],
+            "additionalProperties": true
+        },
+        {
+            "$ref": "context.schema.json#/definitions/BaseContext"
+        }
+    ],
+    "examples": [
+        {
+            "type": "cdm.observable.asset.PriceQuantity",
+            "$schema": "priceQuantity.schema.json",
+            "data": {
+                "price": [
+                    {
+                        "value": {
+                            "priceExpression": "AbsoluteTerms",
+                            "priceType": "AssetPrice",
+                            "price": [
+                                {
+                                    "value": 99.75
+                                }
+                            ],
+                            "perUnitOfAmount": {
+                                "currency": "USD"
+                            }
+                        }
+                    }
+                ],
+                "quantity": [
+                    {
+                        "value": {
+                            "schedule": [
+                                {
+                                    "value": 1000000
+                                }
+                            ],
+                            "unitOfMeasure": "USD"
+                        }
+                    }
+                ],
+                "observable": {
+                    "value": {
+                        "productIdentifier": [
+                            {
+                                "identifier": "US1234567890",
+                                "source": "CUSIP"
+                            }
+                        ]
+                    }
+                },
+                "effectiveDate": {
+                    "adjustableDate": {
+                        "unadjustedDate": "2025-04-01",
+                        "dateAdjustments": {
+                            "businessDayConvention": "FOLLOWING",
+                            "businessCenters": {
+                                "businessCenter": [
+                                    {
+                                        "value": "USNY"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

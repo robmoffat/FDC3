@@ -1,0 +1,59 @@
+{
+    "type": "cdm.observable.asset.PriceQuantity",
+    "$schema": "priceQuantity.schema.json",
+    "data": {
+        "price": [
+            {
+                "value": {
+                    "priceExpression": "AbsoluteTerms",
+                    "priceType": "AssetPrice",
+                    "price": [
+                        {
+                            "value": 99.75
+                        }
+                    ],
+                    "perUnitOfAmount": {
+                        "currency": "USD"
+                    }
+                }
+            }
+        ],
+        "quantity": [
+            {
+                "value": {
+                    "schedule": [
+                        {
+                            "value": 1000000
+                        }
+                    ],
+                    "unitOfMeasure": "USD"
+                }
+            }
+        ],
+        "observable": {
+            "value": {
+                "productIdentifier": [
+                    {
+                        "identifier": "US1234567890",
+                        "source": "CUSIP"
+                    }
+                ]
+            }
+        },
+        "effectiveDate": {
+            "adjustableDate": {
+                "unadjustedDate": "2025-04-01",
+                "dateAdjustments": {
+                    "businessDayConvention": "FOLLOWING",
+                    "businessCenters": {
+                        "businessCenter": [
+                            {
+                                "value": "USNY"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
